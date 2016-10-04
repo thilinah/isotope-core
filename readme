@@ -1,1 +1,10 @@
+Add Sub module
+--------------
 git submodule add https://github.com/thilinah/isotope-core.git src
+
+Remove Sub Module
+-----------------
+git submodule deinit src
+git rm src
+git rm --cached src
+rm -rf .git/modules/src

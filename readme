@@ -8,3 +8,5 @@ git submodule deinit src
 git rm src
 git rm --cached src
 rm -rf .git/modules/src
+
+//TODO - Add other modules also

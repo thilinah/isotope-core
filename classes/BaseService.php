@@ -488,13 +488,13 @@ class BaseService{
 			$tObj = new $fTable();
 			$tObj->Load($v[1]."= ?",array($item->$k));
 
-			if($tObj->$v[1] == $item->$k){
+			if($tObj->{$v[1]} == $item->$k){
 				$v[2] = str_replace("+"," ",$v[2]);
 				$values = explode(" ", $v[2]);
 				if(count($values) == 1){
 					$idField = $k."_id";
 					$item->$idField = $item->$k;
-					$item->$k = $tObj->$v[2];
+					$item->$k = $tObj->{$v[2]};
 
 				}else{
 					$objVal = "";
@@ -551,13 +551,13 @@ class BaseService{
 					$fTable = $v[0];
 					$tObj = new $fTable();
 					$tObj->Load($v[1]."= ?",array($obj->$k));
-					if($tObj->$v[1] == $obj->$k){
+					if($tObj->{$v[1]} == $obj->$k){
 						$name = $k."_Name";
 						$values = explode("+", $v[2]);
 						if(count($values) == 1){
 							$idField = $name."_id";
 							$obj->$idField = $obj->$name;
-							$obj->$name = $tObj->$v[2];
+							$obj->$name = $tObj->{$v[2]};
 						}else{
 							$objVal = "";
 							foreach($values as $v){

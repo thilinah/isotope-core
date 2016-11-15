@@ -1575,6 +1575,11 @@ class CustomFieldManager {
 		return $object;
 
 	}
+	
+	
+	public function syncMigrations(){
+			
+	}
 
 }
 

@@ -42,6 +42,7 @@ include (APP_BASE_PATH."classes/RestApiManager.php");
 include (APP_BASE_PATH."classes/ModuleBuilder.php");
 include (APP_BASE_PATH."classes/SimpleImage.php");
 include (APP_BASE_PATH."classes/Macaw.php");
+include (APP_BASE_PATH."classes/Migration.php");
 include (APP_BASE_PATH."classes/crypt/Aes.php");
 include (APP_BASE_PATH."classes/crypt/AesCtr.php");
 
